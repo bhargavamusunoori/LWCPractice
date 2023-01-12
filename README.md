@@ -34,3 +34,9 @@ sfdx force:data:tree:import -p scripts\data\Account-Contact-plan.json -u <Replac
     DataFix.UpdatePartnerType();
 
 #   3.2.1 Go to Account list view -> Partner Accounts -> Manually update Primary contact POC for each account -> Save
+
+
+# OR 
+
+# install using unmanaged package
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04t5g000000qDnIAAU

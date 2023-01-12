@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to JS session !!!!</title>
+
+    <!--<script src="functionhelper.js"></script>-->
+
+
+    <!--<script src="arrays.js"></script>-->
+
+    <script src="greetings.js"></script>
+</head>
+
+<body>
+    <h1>Learning Modern JS !!!!!</h1>
+    <ul>
+        <li>Variable Scope</li>
+        <li>String Interpolation</li>
+        <li>Arrow Functions</li>
+        <li>JS Modules</li>
+        <li>JS Classes</li>
+    </ul>
+    <input type="button" value="Add User Card" onclick="createUserCard();"/>
+    
+    <template id="user-card">
+               
+            <img class="userImg"/>
+            <h4 class="uname"></h4>
+        
+    </template>
+
+    <ul id="user-card-array">
+
+    </ul>
+
+
+    <button type="button">Click Me!</button>
+
+    <!-- OUR OWN CUSTOM ELEMENT OR HTML TAG-->
+    <greetings-show lang="en" defaultvalue = "Hi there !!!" style="color: blue;"></greetings-show> <!-- OP: Good morning !!!-->
+    <greetings-show lang="fr" defaultvalue = ""></greetings-show>
+    <greetings-show lang="gr"></greetings-show>
+
+
+    <!--<script src="JSHelper.js"></script>-->
+    <!--<script src="htmltemplate.js"></script>-->
+    <!--<script src="spreadOperator.js"></script>-->
+    <script src="showimage.js" type="module"></script>
+    <!--<script src="class.js"></script>-->
+
+
+</body>
+
+</html>

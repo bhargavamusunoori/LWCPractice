@@ -1,0 +1,12 @@
+Code Builder Org:
+=================
+
+https://wise-bear-qbo473-dev-ed.trailblaze.lightning.force.com/lightning/page/home
+
+Development Org:
+================
+https://empathetic-shark-auvxan-dev-ed.lightning.force.com/
+UName: 	rajeshprabhu.balak@hcl.com.shark (sys admin)
+
+Step 1: Install code builder app exchange
+step 2: create an environment and connect that to a development org
