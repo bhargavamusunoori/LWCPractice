@@ -6,12 +6,11 @@ git clone https://github.com/ShareAndShine/partnermanagment_oct2022.git
 # 2 - Code deployment
 # Deploy base code to your connected org
 # Use SFDX command or VS code command palatte to deploy base code to the org
-sfdx force:source:deploy -u <ReplaceWothOrgAliasName>
+sfdx force:source:deploy -u <ReplaceWothOrgAliasName> -p force-app
 
 # 3 - Assign Permission set & Load sample Data
 # Use SFDX command
-sfdx force:user:permset:assign -n Partner_Management_App
-
+sfdx force:user:permset:assign -n Partner_Management_App 
 # Import Partner Type 
 
 # 3.1 Bash Command
