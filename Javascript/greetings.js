@@ -51,3 +51,4 @@ class Greetings extends HTMLElement { // inheritance
 // instruct the browser to run the code when it encounter a custom HTML Tag
 // <greetings> 
 customElements.define('greetings-show',Greetings)
+
