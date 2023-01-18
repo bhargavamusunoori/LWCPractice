@@ -1,3 +1,12 @@
+@import 'c/commonStyles';
+
 .lgc-bg-inverse {
     background-color: rgb(22, 50, 92);
+}
+
+.btn
+{
+    color:green;
+    font-variant: initial;
+    cursor: pointer;
 }

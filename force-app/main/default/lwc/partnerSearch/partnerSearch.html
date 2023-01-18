@@ -1,4 +1,30 @@
 <!-- sldsValidatorIgnore -->
 <template>
-   
+
+   <lightning-layout>
+      <lightning-layout-item>
+         <p>{appdesc}</p>
+      </lightning-layout-item>
+      <lightning-layout-item>
+
+        <div>
+         <lightning-combobox
+         name="Partner Type"
+         label="Partner Type"
+         value={value}
+         placeholder="Select a Partner Type"
+         options={options}
+         variant="label-hidden" >
+      </lightning-combobox>
+        </div>
+         
+         
+
+      </lightning-layout-item>
+
+   </lightning-layout>
+
+
+
+
 </template>
