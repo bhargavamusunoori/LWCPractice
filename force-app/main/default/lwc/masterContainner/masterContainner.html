@@ -6,11 +6,22 @@
     <!-- naming convention to follow is Kebab case when a component is referenced inside another component -->
     <!-- Master component configusration like targets / idexposed floag are inherited by the child component natively -->
     <!-- sot that master will drive visibility and other security aspects -->
-    <div>
-        <p class="title">Partner Managemenent App</p>
-        <c-partner-search></c-partner-search>
+
+    <div class="slds-var-m-bottom_small">
+        <lightning-card>
+            <c-partner-search></c-partner-search>
+        </lightning-card>
     </div>
 
-    
-    
+    <div class="slds-var-m-vertical_small">
+        <lightning-card title="Available Partners">
+            <c-partner-search-result></c-partner-search-result>
+        </lightning-card>
+    </div>
+
+
+
+
+
+
 </template>

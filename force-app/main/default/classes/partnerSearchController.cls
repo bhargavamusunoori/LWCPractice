@@ -5,7 +5,7 @@ public with sharing class partnerSearchController {
     public static List<Partner_Type__c> getAllPartnerTypes() {
 
         try {
-            return [SELECT ID, Name FROM Partner_Type__c];    
+            return [SELECT ID, Name FROM Partner_Type__c WITH SECURITY_ENFORCED];    
         } catch (Exception ex) {
 
             throw new AuraHandledException(ex.getMessage());
@@ -14,4 +14,16 @@ public with sharing class partnerSearchController {
         
         
     }
+
+    public static List<Account> getAllAccounts() {
+        try {
+            return [SELECT ID, Name FROM Account];
+        } catch (Exception ex) {
+            
+            throw new Exception(ex.getMessage());
+        }
+        
+    }
+
+    
 }
