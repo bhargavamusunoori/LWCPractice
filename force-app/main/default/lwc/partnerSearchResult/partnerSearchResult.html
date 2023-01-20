@@ -1,5 +1,25 @@
 <template>
 
-   <c-partner-card></c-partner-card>
-   
+
+   <template if:true={isPartnersAvailable}>
+      <template for:each={ChannelPartnersList} for:item="partner">
+         <div key={partner.Id}>
+            <!-- child component-->
+            <c-partner-card partner-profile={partner}></c-partner-card>
+
+         </div>
+
+      </template>
+   </template>
+   <template if:false={isPartnersAvailable}>
+      <p>No partners found !!!!</p>
+   </template>
+
+
+
+
+
+
+
+
 </template>
