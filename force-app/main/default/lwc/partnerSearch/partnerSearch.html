@@ -7,16 +7,34 @@
       </lightning-layout-item>
       <lightning-layout-item>
 
-        <div>
-         <lightning-combobox
-         name="Partner Type"
-         label="Partner Type"
-         value={value}
-         placeholder="Select a Partner Type"
-         options={partnerTypes}
-         variant="label-hidden" >
-      </lightning-combobox>
-        </div>
+         <lightning-layout>
+            <lightning-layout-item>
+               
+               <div>
+                  <lightning-combobox
+                  name="Partner Type"
+                  label="Partner Type"
+                  value={value}
+                  placeholder="Select a Partner Type"
+                  options={partnerTypes}
+                  variant="label-hidden" >
+               </lightning-combobox>
+         
+                 </div>
+               
+               </lightning-layout-item>
+
+            <lightning-layout-item>
+
+               <lightning-icon icon-name="action:add_relationship" alternative-text="Add a New Partner Type" title="Add a New Partner Type" variant="brand"></lightning-icon>
+               <lightning-icon icon-name="action:new_account" alternative-text="Add New Account" title="Add New Account" variant="brand"></lightning-icon>
+               <lightning-icon icon-name="action:new_contact" alternative-text="Add New Contact" title="Add New Contact" variant="brand"></lightning-icon>
+
+            </lightning-layout-item>
+         </lightning-layout>
+
+
+        
          
          
 
