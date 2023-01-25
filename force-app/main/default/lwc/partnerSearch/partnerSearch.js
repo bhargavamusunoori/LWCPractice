@@ -3,8 +3,14 @@ import { LightningElement, wire} from 'lwc'; // Step 1: Declare that wire functi
 // Step 2: use @salesforce module to access apex method
 import fetchAllPartnerType from '@salesforce/apex/partnerSearchController.getAllPartnerTypes'; 
 
-export default class PartnerSearch extends LightningElement {
 
+// Navigation Mix - Step 1
+import { NavigationMixin } from 'lightning/navigation';
+
+// Refs: Mixin in JS  
+
+// Navigation Mix - Step 3
+export default class PartnerSearch extends NavigationMixin(LightningElement) {
 
    // Data binding
 
@@ -74,6 +80,72 @@ export default class PartnerSearch extends LightningElement {
       {
          console.log('Error');
       }
+   }
+
+   navigateToPartnerTypeCreatePage()
+   {
+       // Navigation Mix - Step 2
+      // call navigate fundtion by passing all input paramerts in JS object format
+
+      
+      // input paramaters
+      const inputParams = {
+         type: 'standard__objectPage',
+         attributes: {
+            actionName: "new",
+            objectApiName: "Partner_Type__c"
+         }
+      };
+      this[NavigationMixin.Navigate](inputParams);
+   }
+
+   navigateToAccountCreatePage()
+   {
+       // Navigation Mix - Step 2
+      // call navigate fundtion by passing all input paramerts in JS object format
+
+      
+      // input paramaters
+      const inputParams = {
+         type: 'standard__objectPage',
+         attributes: {
+            actionName: "new",
+            objectApiName: "Account"
+         }
+      };
+      this[NavigationMixin.Navigate](inputParams);
+   }
+
+   navigateToContactCreatePage()
+   {
+       // Navigation Mix - Step 2
+      // call navigate fundtion by passing all input paramerts in JS object format
+
+      
+      // input paramaters
+      const inputParams = {
+         type: 'standard__objectPage',
+         attributes: {
+            actionName: "new",
+            objectApiName: "Contact"
+         }
+      };
+      this[NavigationMixin.Navigate](inputParams);
+   }
+
+
+   handlePartnerTypeChange(event)
+   {
+      const partnerTypeId = event.detail.value;
+
+      console.log('partnerTypeId - On change is ' + partnerTypeId);
+
+      // Child to parent communication using custom events
+      // Step 1: Create a custom event
+      //Syntax: const partnerTypeCustomEvent = new CustomEvent("param1 > Name of the event)", "pass data in JS object format");
+      const partnerTypeCustomEvent = new CustomEvent("selectedpartnertype", {detail: partnerTypeId});
+      this.dispatchEvent(partnerTypeCustomEvent);
+      
    }
 
    /* Syntax for reference
