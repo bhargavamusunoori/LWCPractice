@@ -1,4 +1,36 @@
 <!-- sldsValidatorIgnore -->
 <template>
     
+    <lightning-record-view-form
+    object-api-name={objectApiName}
+    record-id={recordId}>
+
+    <div class="slds-grid">
+        <!-- column 1-->
+        <div class="slds-col slds-size_1-of-2">
+            <lightning-output-field field-name={partner_Name}> </lightning-output-field>
+            <lightning-output-field field-name={partner_POC}> </lightning-output-field>
+            <lightning-output-field field-name={partner_ContractStartDate}> </lightning-output-field>
+            <lightning-output-field field-name={partner_ContractEndDate}> </lightning-output-field>
+        </div>
+        <!-- column 2 -->
+        <div class="slds-col slds-size_1-of-2">
+            <lightning-output-field field-name={partner_budget}> </lightning-output-field>
+            <lightning-output-field field-name={partner_Trainned}> </lightning-output-field>
+            <lightning-output-field field-name={partner_activepipeline}> </lightning-output-field>
+            <lightning-output-field field-name={partner_totalSales}> </lightning-output-field>
+            <lightning-output-field field-name={partner_lat}> </lightning-output-field>
+        </div>
+
+
+
+    </div>
+
+
+    
+
+    
+    
+</lightning-record-view-form>
+
 </template>
