@@ -1,3 +1,39 @@
 <template>
-    
+
+   <lightning-layout multiple-rows horizontal-align="center">
+
+      <template if:true={isPartnersAvailable}>
+         <template for:each={ChannelPartnersList} for:item="partner">
+
+            <lightning-layout-item key={partner.Id}>
+               <div class="card">
+                     <!-- child component-->
+                     <c-partner-card partner-profile={partner}></c-partner-card>
+
+               </div>
+
+               
+            </lightning-layout-item>
+
+         </template>
+      </template>
+      <template if:false={isPartnersAvailable}>
+         <p class="slds-align_absolute-center">No partners ound !!!!</p>
+      </template>
+   
+
+   </lightning-layout>
+
+
+
+
+
+   
+
+
+
+
+
+
+
 </template>

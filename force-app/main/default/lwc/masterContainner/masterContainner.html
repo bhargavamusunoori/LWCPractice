@@ -1,3 +1,27 @@
 <template>
-    
+
+    <!-- Refer another component -->
+    <!-- Adding a child component -->
+    <!-- c is default namespace | Only if you have configured namespace in ur org pls use that !!! -->
+    <!-- naming convention to follow is Kebab case when a component is referenced inside another component -->
+    <!-- Master component configusration like targets / idexposed floag are inherited by the child component natively -->
+    <!-- sot that master will drive visibility and other security aspects -->
+
+    <div class="slds-var-m-bottom_small">
+        <lightning-card>
+            <c-partner-search onselectedpartnertype={partnerTypeHandler}></c-partner-search>
+        </lightning-card>
+    </div>
+
+    <div class="slds-var-m-vertical_small">
+        <lightning-card title="Available Partners">
+            <c-partner-search-result partner-type-id={selectedPartnerTypeId}></c-partner-search-result>
+        </lightning-card>
+    </div>
+
+
+
+
+
+
 </template>

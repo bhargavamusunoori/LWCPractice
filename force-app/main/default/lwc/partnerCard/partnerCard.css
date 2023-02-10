@@ -18,6 +18,11 @@
     font-weight: bold;
     text-transform: uppercase;
   }
+
+  .titleStyleForMarketingPartner
+  {
+    color:blue;
+  }
   
   .selected{
     border-width: medium;
@@ -27,3 +32,7 @@
   }
 
   .pointer {cursor: pointer;}
+
+div.card:hover{
+  color:red;
+}
